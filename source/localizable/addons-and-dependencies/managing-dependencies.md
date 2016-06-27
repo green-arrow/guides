@@ -27,7 +27,9 @@ Thus it reloads your app if you install new dependencies via `bower install <dep
 
 ## Other assets
 
-Assets not available as an addon or Bower package should be placed in the `vendor` folder in your project.
+Third-party assets not available as an addon or Bower package should be placed in the `vendor` folder in your project.
+
+Your own assets (such as `robots.txt` and your `favicon`) should be placed in the `public` folder in your project.
 
 ## Compiling Assets
 
@@ -109,7 +111,11 @@ All style assets added this way will be concatenated and output as `/assets/vend
 
 ### Other Assets
 
-All other assets like images or fonts can also be added via `import()`.
+All assets located in the `public` folder will be copied as is to the `dist/` folder.
+
+For example, a `favicon` located at `public/images/favicon.ico` will be copied to `dist/images/favicon.ico`.
+
+All other third-party assets like images or fonts can also be added via `import()`.
 By default, they
 will be copied to `dist/` as they are.
 
